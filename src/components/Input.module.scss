@@ -1,0 +1,19 @@
+.input {
+  width: 100%;
+  padding: 0.75rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  outline: none;
+  transition: border 0.3s ease;
+
+  &:focus {
+    border-color: #0070f3;
+  }
+
+  &::placeholder {
+    color: #9ca3af; // Tailwind's gray-400 for a lighter look
+    opacity: 1;
+  }
+}

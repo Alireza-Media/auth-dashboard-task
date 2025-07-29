@@ -1,0 +1,20 @@
+.wrapper {
+  padding: 2rem;
+  text-align: center;
+}
+
+.logout {
+  margin-top: 2rem;
+  padding: 0.75rem 1.5rem;
+  background-color: #e00;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+
+  &:hover {
+    background-color: #c00;
+  }
+}
