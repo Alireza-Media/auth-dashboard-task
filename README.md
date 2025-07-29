@@ -1,36 +1,70 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🔐 Auth Task – Next.js + TypeScript
 
-## Getting Started
+This is a simple authentication flow built with Next.js, TypeScript, SCSS Modules, and Zod.  
+The app includes a login page (`/auth`) with Iranian phone number validation and a protected dashboard page (`/dashboard`) that uses mock user data.
 
-First, run the development server:
+---
+
+## 🚀 Getting Started
+
+To run this project locally:
+
+1. **Clone the repository:**
+
+```bash
+git clone https://github.com/Alireza-Media/auth-dashboard-task
+cd auth-dashboard-task
+```
+
+2. **Install dependencies:**
+
+```bash
+npm install
+```
+
+3. **Run the development server:**
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+4. **Open your browser:**
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Go to [http://localhost:3000/auth](http://localhost:3000/auth)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## 📦 Project Structure
 
-To learn more about Next.js, take a look at the following resources:
+```
+src/
+├── app/
+│   ├── auth/         → Login page
+│   ├── dashboard/    → Dashboard page
+│   └── layout.tsx    → Global layout (with RTL + global styles)
+├── components/       → Reusable Input and Button
+├── data/             → Mock user data (api.json)
+├── styles/           → Global SCSS
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 📋 How It Works
 
-## Deploy on Vercel
+- User enters a valid Iranian mobile number (e.g., 09123456789)
+- The form is validated using **Zod**
+- On success, a random user from `api.json` is saved to **localStorage**
+- User is redirected to `/dashboard`
+- Dashboard displays a welcome message
+- If no user is logged in, `/dashboard` redirects back to `/auth`
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🛠 Tech Stack
+
+- ✅ Next.js 13+ (App Router)
+- ✅ TypeScript
+- ✅ SCSS Modules
+- ✅ Zod (form validation)
+- ✅ localStorage
+- ✅ RTL layout for Persian
